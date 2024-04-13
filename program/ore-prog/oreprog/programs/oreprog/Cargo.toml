@@ -1,0 +1,22 @@
+[package]
+name = "oreprog"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "oreprog"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+ore = { version = "1.2.1", package = "ore-program" ,features=["no-entrypoint"]}
+solana-program = "*"
+anchor-spl = "0.29.0"

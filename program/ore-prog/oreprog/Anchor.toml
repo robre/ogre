@@ -1,0 +1,54 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+oreprog = "omcpZynsRS1Py8TP28zeTemamQoRPpuqwdqV8WXnL4M"
+[[test.genesis]]
+address = "mineRHF5r6S7HyD9SppBfVMXMavDkJsxwGesEvxZr2A"
+program = "mine.so"
+
+[test.validator]
+url = "https://api.mainnet-beta.solana.com"
+
+# TREASURY
+[[test.validator.clone]]
+address = "FTap9fv2GPpWGqrLj3o4c9nHH7p36ih7NbSWHnrkQYqa"
+
+# TREASURY Ore
+[[test.validator.clone]]
+address = "37ywg5kxKVb3q3bpvdYhQZBPHrHAXVo91RXoBBj7Boo9"
+
+# Ore Mint
+[[test.validator.clone]]
+address = "oreoN2tQbHXVaZsr3pf66A48miqcBXCDJozganhEJgz"
+
+# Busses
+[[test.validator.clone]]
+address = "9ShaCzHhQNvH8PLfGyrJbB8MeKHrDnuPMLnUDLJ2yMvz"
+[[test.validator.clone]]
+address = "4Cq8685h9GwsaD5ppPsrtfcsk3fum8f9UP4SPpKSbj2B"
+[[test.validator.clone]]
+address = "8L1vdGdvU3cPj9tsjJrKVUoBeXYvAzJYhExjTYHZT7h7"
+[[test.validator.clone]]
+address = "JBdVURCrUiHp4kr7srYtXbB7B4CwurUt1Bfxrxw6EoRY"
+[[test.validator.clone]]
+address = "DkmVBWJ4CLKb3pPHoSwYC2wRZXKKXLD2Ued5cGNpkWmr"
+[[test.validator.clone]]
+address = "9uLpj2ZCMqN6Yo1vV6yTkP6dDiTTXmeM5K3915q5CHyh"
+[[test.validator.clone]]
+address = "EpcfjBs8eQ4unSMdowxyTE8K3vVJ3XUnEr5BEWvSX7RB"
+[[test.validator.clone]]
+address = "Ay5N9vKS2Tyo2M9u9TFt59N1XbxdW93C7UrFZW3h8sMC"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

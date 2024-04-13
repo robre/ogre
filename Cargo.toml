@@ -41,7 +41,7 @@ colored = "2"
 comfy-table = "7.1.1"                 # An easy to use library for building beautiful tables with automatic content wrapping
 reqwest = { version = "0.12.3", features = [ "json" ] }
 serde = "1.0.197"                              # A generic serialization/deserialization framework
-oreprog = { path = "../ore-prog/oreprog/programs/oreprog", features = [ "no-entrypoint" ] }
+oreprog = { path = "./program/ore-prog/oreprog/programs/oreprog", features = [ "no-entrypoint" ] }
 sha3 = "0.10.4"
 #clap = { version = "4.4.12", features = ["derive"] }
 
