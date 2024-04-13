@@ -6,13 +6,13 @@ pub const OGRETHREADS: u32 = 8;
 pub const SUBMITTERTHREADS: u32 = 3;
 
 /// Keypair
-pub const FUNDING: &str = "./kekXZMELSPFLDpUwMfWwvBbgujTun98eEBVZMrDwtFX.json";
+pub const FUNDING: &str = "./id.json";
 /// Pubkey of above
-pub const FUNDING_PK: Pubkey = pubkey!("kekXZMELSPFLDpUwMfWwvBbgujTun98eEBVZMrDwtFX");
+pub const FUNDING_PK: Pubkey = pubkey!("PUBKEYPUBKEYPUBKEYPUBKEY");
 
 /// RPC used for reading Data from the chain
 pub const RPC: &str = "https://api.mainnet-beta.solana.com";
-/// RPC used for sendTransaction only
+/// RPC used for sendTransaction only. It's called jito but doesn't have to be jito at all.
 pub const JITO: &str = "https://api.mainnet-beta.solana.com";
 /// If sendTransaction RPC above is jito, set this to true to add a tip
 pub const INCLUDE_TIP: bool = false;
@@ -33,7 +33,7 @@ pub const CU_LIMIT_REGISTER: u32 = 7660 + 35_000;
 pub const CU_LIMIT_TRANSFER: u32 = 5000;
 
 /// Priority Fee
-pub const PRIO_FEE: u64 = 500_099;
+pub const PRIO_FEE: u64 = 100_000;
 
 
 /// How long do we look for confirmations for sent transactions. During these congested times
